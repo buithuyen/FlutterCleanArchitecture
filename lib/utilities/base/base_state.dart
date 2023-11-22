@@ -9,23 +9,22 @@ class SuccessState extends BaseState {}
 class ValueChangedState extends BaseState {}
 
 class HUDLoadingState extends BaseState {
+  HUDLoadingState({this.message, this.highlightContent});
   final String? message;
   final String? highlightContent;
-  HUDLoadingState({this.message, this.highlightContent});
 }
 
 class LoadingState extends BaseState {
-  final int id;
   LoadingState({this.id = 0});
+  final int id;
 }
 
 class ErrorState extends BaseState {
-  final BaseException error;
-
   ErrorState({required this.error});
+  final BaseException error;
 }
 
 class AlertState extends BaseState {
-  final String? message;
   AlertState({this.message});
+  final String? message;
 }
