@@ -1,4 +1,4 @@
-import 'package:flutter_clean_architecture/utilities/base/base_exception.dart';
+import 'package:flutter_clean_architecture/presentation/base/base_exception.dart';
 
 abstract class BaseState {}
 

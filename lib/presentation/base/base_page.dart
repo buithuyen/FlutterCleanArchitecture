@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_clean_architecture/utilities/base/base_cubit.dart';
-import 'package:flutter_clean_architecture/utilities/base/base_data.dart';
+import 'package:flutter_clean_architecture/presentation/base/base_cubit.dart';
+import 'package:flutter_clean_architecture/presentation/base/base_data.dart';
 import 'package:flutter_clean_architecture/utilities/injection/injection_container.dart';
 
 abstract class BasePageState<W extends StatefulWidget, C extends BaseCubit<D>,

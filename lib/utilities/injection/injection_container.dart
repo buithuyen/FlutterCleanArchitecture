@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart' as dio;
-import 'package:flutter_clean_architecture/platform/networking/parse_provider.dart';
+import 'package:flutter_clean_architecture/platform/networking/provider/parse_provider.dart';
 import 'package:flutter_clean_architecture/utilities/helpers/flavor_getter.dart';
 import 'package:flutter_clean_architecture/utilities/helpers/network_interceptor.dart';
 import 'package:flutter_clean_architecture/utilities/injection/injection_container.config.dart';

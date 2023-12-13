@@ -12,7 +12,7 @@ class RoutePaths {
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
-    String? path = settings.name;
+    final path = settings.name;
     final arguments = settings.arguments;
 
     switch (path) {
@@ -39,7 +39,7 @@ class AppRouter {
             child: Text(
               'Page not found',
             ),
-          )),
+          ),),
         );
     }
   }
