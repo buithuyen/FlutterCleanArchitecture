@@ -13,7 +13,10 @@ class NetworkInterceptor extends InterceptorsWrapper {
   }
 
   @override
-  void onResponse(Response response, ResponseInterceptorHandler handler) {
+  void onResponse(
+    Response<dynamic> response,
+    ResponseInterceptorHandler handler,
+  ) {
     if (kDebugMode) {
       const encoder = JsonEncoder.withIndent('     ');
       final json = encoder.convert(response.data);
@@ -23,7 +26,7 @@ class NetworkInterceptor extends InterceptorsWrapper {
   }
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     if (kDebugMode) {
       print('[API] onError =>\n$err');
     }
