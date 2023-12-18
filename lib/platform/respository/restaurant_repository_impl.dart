@@ -3,7 +3,7 @@ import 'package:flutter_clean_architecture/domain/respository/restaurant_resposi
 import 'package:flutter_clean_architecture/platform/networking/provider/parse_provider.dart';
 import 'package:injectable/injectable.dart';
 
-@injectable
+@Injectable(as: RestaurantRepository)
 class RestaurantRepostoryImpl extends RestaurantRepository {
   RestaurantRepostoryImpl({required ParseProvider parseProvider})
       : _parseProvider = parseProvider;

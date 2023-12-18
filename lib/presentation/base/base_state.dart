@@ -19,6 +19,10 @@ class LoadingState extends BaseState {
   final int id;
 }
 
+class RefreshState extends BaseState {}
+
+class LoadmoreState extends BaseState {}
+
 class ErrorState extends BaseState {
   ErrorState({required this.error});
   final BaseException error;
