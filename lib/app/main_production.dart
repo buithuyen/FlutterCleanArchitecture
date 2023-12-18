@@ -8,7 +8,7 @@ void main() {
   FlavorConfig(
     color: Colors.blue,
     variables: {
-      Flavor.baseURLKey: 'https://parseapi.back4app.com/classes/',
+      Flavor.baseURLKey: 'https://parseapi.back4app.com/classes',
       Flavor.parseApplicationIDKey: 'slS93XEXLQP3jzHqgNmYqWjIJM6RsglP6dg06ujX',
       Flavor.parseRestAPIKey: '2Y7OJl2Bx80KLdKfEUmTCVQqR4Onbr3hkgF83JVg',
     },

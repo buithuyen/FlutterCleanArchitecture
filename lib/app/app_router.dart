@@ -13,7 +13,7 @@ class RoutePaths {
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final path = settings.name;
-    final arguments = settings.arguments;
+    // final arguments = settings.arguments;
 
     switch (path) {
       case RoutePaths.splash:
@@ -31,15 +31,16 @@ class AppRouter {
           settings: settings,
           builder: (context) => const HomePage(),
         );
-      
+
       default:
         return MaterialPageRoute(
           builder: (context) => const Scaffold(
-              body: Center(
-            child: Text(
-              'Page not found',
+            body: Center(
+              child: Text(
+                'Page not found',
+              ),
             ),
-          ),),
+          ),
         );
     }
   }
