@@ -8,7 +8,7 @@ part 'restaurant_list_data.g.dart';
 @CopyWith()
 class RestaurantListData extends BaseData {
   RestaurantListData({BaseState? state, this.restaurants})
-      : super(InitialState());
+      : super(state ?? InitialState());
 
   final List<Restaurant>? restaurants;
 }

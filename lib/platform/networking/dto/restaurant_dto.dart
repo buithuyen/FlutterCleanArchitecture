@@ -19,11 +19,11 @@ class RestaurantDTO extends Restaurant {
   });
 
   factory RestaurantDTO.fromJson(Map<String, dynamic> json) => RestaurantDTO(
-        objectId: json['objectId'] as String,
+        objectId: json['objectId'] as String?,
         location: json['location'] == null
             ? null
             : LocationDTO.fromJson(json['location'] as Map<String, dynamic>),
-        name: json['name'] as String,
+        name: json['name'] as String?,
         photos: json['photos'] == null
             ? []
             : List<PhotoDTO>.from(
@@ -31,12 +31,12 @@ class RestaurantDTO extends Restaurant {
                   (x) => PhotoDTO.fromJson(x as Map<String, dynamic>),
                 ),
               ),
-        placeId: json['place_id'] as String,
-        priceLevel: json['price_level'] as int,
-        rating: json['rating'] as double,
-        reference: json['reference'] as String,
-        userRatingsTotal: json['user_ratings_total'] as int,
-        vicinity: json['vicinity'] as String,
+        placeId: json['place_id'] as String?,
+        priceLevel: json['price_level'] as num?,
+        rating: json['rating'] as num?,
+        reference: json['reference'] as String?,
+        userRatingsTotal: json['user_ratings_total'] as num?,
+        vicinity: json['vicinity'] as String?,
         createdAt: json['createdAt'] == null
             ? null
             : DateTime.parse(json['createdAt'] as String),

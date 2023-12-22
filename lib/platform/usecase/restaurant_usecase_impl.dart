@@ -8,7 +8,7 @@ class RestaurantUsecaseImpl extends RestaurantUsecase {
   RestaurantUsecaseImpl({required RestaurantRepository restaurantRepository})
       : _restaurantRepository = restaurantRepository;
 
-  RestaurantRepository _restaurantRepository;
+  final RestaurantRepository _restaurantRepository;
 
   @override
   Future<List<Restaurant>> getInitialRestaurantList() {

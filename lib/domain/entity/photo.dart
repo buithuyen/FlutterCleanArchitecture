@@ -5,7 +5,7 @@ abstract class Photo {
     this.photoReference,
     this.width,
   });
-  final int? height;
+  final num? height;
   final String? photoReference;
-  final int? width;
+  final num? width;
 }

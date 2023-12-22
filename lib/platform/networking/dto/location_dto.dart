@@ -7,12 +7,7 @@ class LocationDTO extends Location {
   });
 
   factory LocationDTO.fromJson(Map<String, dynamic> json) => LocationDTO(
-        lat: json['lat'] as double ,
-        lng: json['lng'] as double,
+        lat: json['lat'] as num?,
+        lng: json['lng'] as num?,
       );
-
-  Map<String, dynamic> toJson() => {
-        'lat': lat,
-        'lng': lng,
-      };
 }

@@ -8,14 +8,8 @@ class PhotoDTO extends Photo {
   });
 
   factory PhotoDTO.fromJson(Map<String, dynamic> json) => PhotoDTO(
-        height: json['height'] as int,
-        photoReference: json['photo_reference'] as String,
-        width: json['width'] as int,
+        height: json['height'] as num?,
+        photoReference: json['photo_reference'] as String?,
+        width: json['width'] as num?,
       );
-
-  Map<String, dynamic> toJson() => {
-        'height': height,
-        'photo_reference': photoReference,
-        'width': width,
-      };
 }

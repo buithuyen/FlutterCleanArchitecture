@@ -22,10 +22,10 @@ abstract class Restaurant {
   final String? name;
   final List<Photo>? photos;
   final String? placeId;
-  final int? priceLevel;
-  final double? rating;
+  final num? priceLevel;
+  final num? rating;
   final String? reference;
-  final int? userRatingsTotal;
+  final num? userRatingsTotal;
   final String? vicinity;
   final DateTime? createdAt;
   final DateTime? updatedAt;

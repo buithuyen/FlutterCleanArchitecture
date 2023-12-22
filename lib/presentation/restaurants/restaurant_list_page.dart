@@ -27,6 +27,12 @@ class _RestaurantListPageState extends BasePageState<RestaurantListPage,
   }
 
   @override
+  void onDataChange(BuildContext context, RestaurantListData data) {
+    // TODO: implement onDataChange
+    super.onDataChange(context, data);
+  }
+
+  @override
   Widget buildPage(BuildContext context, RestaurantListData data) {
     return Scaffold(
       appBar: buildAppBar(context: context, title: 'Restaurants'),
