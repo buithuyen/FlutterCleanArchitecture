@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_clean_architecture/platform/networking/dto/restaurant_dto.dart';
+import 'package:flutter_clean_architecture/platform/networking/response/restaurants_response.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'parse_provider.g.dart';
@@ -8,6 +8,6 @@ part 'parse_provider.g.dart';
 abstract class ParseProvider {
   factory ParseProvider(Dio dio, {String baseUrl}) = _ParseProvider;
 
-  @GET("/Restaurant")
-  Future<List<RestaurantDTO>> getRestaurants();
+  @GET('/Restaurant')
+  Future<RestaurantResponse> getRestaurants();
 }

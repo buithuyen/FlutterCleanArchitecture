@@ -11,7 +11,12 @@ class RestaurantRepostoryImpl extends RestaurantRepository {
   final ParseProvider _parseProvider;
 
   @override
-  Future<List<Restaurant>> getRestaurants({int page = 0}) {
-    return _parseProvider.getRestaurants();
+  Future<List<Restaurant>> getRestaurants({int page = 0}) async {
+    try {
+      final response = await _parseProvider.getRestaurants();
+      return response.results ?? [];
+    } catch (e) {
+      rethrow;
+    }
   }
 }

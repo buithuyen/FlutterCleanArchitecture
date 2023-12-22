@@ -21,13 +21,13 @@ class _ParseProvider implements ParseProvider {
   String? baseUrl;
 
   @override
-  Future<List<RestaurantDTO>> getRestaurants() async {
+  Future<RestaurantResponse> getRestaurants() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<List<dynamic>>(_setStreamType<List<RestaurantDTO>>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<RestaurantResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -43,9 +43,7 @@ class _ParseProvider implements ParseProvider {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    var value = _result.data!
-        .map((dynamic i) => RestaurantDTO.fromJson(i as Map<String, dynamic>))
-        .toList();
+    final value = RestaurantResponse.fromJson(_result.data!);
     return value;
   }
 

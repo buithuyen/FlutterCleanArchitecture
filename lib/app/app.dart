@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_clean_architecture/app/app_router.dart';
-import 'package:flutter_clean_architecture/presentation/counter/counter_page.dart';
 import 'package:flutter_clean_architecture/utilities/l10n/l10n.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
 
@@ -37,7 +36,7 @@ class _MyAppState extends State<App> with WidgetsBindingObserver {
         navigatorKey: widget.navigatorKey,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: const CounterPage(),
+        home: const SizedBox.shrink(),
       ),
     );
   }
