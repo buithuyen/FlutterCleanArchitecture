@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/presentation/home/home_page.dart';
-import 'package:flutter_clean_architecture/presentation/login/login_page.dart';
-import 'package:flutter_clean_architecture/presentation/splash/splash_page.dart';
+import 'package:flutter_clean_architecture/presentation/restaurants/restaurant_list_page.dart';
 
 class RoutePaths {
   static const String prefix = 'flutter_demo';
   static const String splash = '/';
   static const String login = '$prefix/login';
   static const String home = '$prefix/home';
+  static const String restaurants = '$prefix/restaurants';
 }
 
 class AppRouter {
@@ -16,20 +15,10 @@ class AppRouter {
     // final arguments = settings.arguments;
 
     switch (path) {
-      case RoutePaths.splash:
+      case RoutePaths.restaurants:
         return MaterialPageRoute(
           settings: settings,
-          builder: (context) => const SplashPage(),
-        );
-      case RoutePaths.login:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (context) => const LoginPage(),
-        );
-      case RoutePaths.home:
-        return MaterialPageRoute(
-          settings: settings,
-          builder: (context) => const HomePage(),
+          builder: (context) => const RestaurantListPage(),
         );
 
       default:

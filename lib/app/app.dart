@@ -5,7 +5,8 @@ import 'package:flutter_clean_architecture/utilities/l10n/l10n.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
 
 mixin RouterObserver {
-  static RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
+  static RouteObserver<PageRoute<dynamic>> routeObserver =
+      RouteObserver<PageRoute<dynamic>>();
 }
 
 class App extends StatefulWidget {
@@ -31,7 +32,7 @@ class _MyAppState extends State<App> with WidgetsBindingObserver {
         navigatorObservers: [
           RouterObserver.routeObserver,
         ],
-        initialRoute: RoutePaths.splash,
+        initialRoute: RoutePaths.restaurants,
         onGenerateRoute: AppRouter.generateRoute,
         navigatorKey: widget.navigatorKey,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
