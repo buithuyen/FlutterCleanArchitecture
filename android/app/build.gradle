@@ -51,7 +51,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.buvaty.fluttercleanarchitecture.flutter_clean_architecture"
+        applicationId "com.buvaty.fluttercleanarchitecture"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
@@ -82,16 +82,19 @@ android {
     productFlavors { 
         production {
             dimension "default"
+            resValue "string", "app_name", "Flutter Clean Architecture"
             applicationIdSuffix ""
             manifestPlaceholders = [appName: "Flutter Clean Architecture"]
         }
         staging {
             dimension "default"
+            resValue "string", "app_name", "[STG] Flutter Clean Architecture"
             applicationIdSuffix ".stg"
             manifestPlaceholders = [appName: "[STG] Flutter Clean Architecture"]
         }
         development {
             dimension "default"
+            resValue "string", "app_name", "[DEV] Flutter Clean Architecture"
             applicationIdSuffix ".dev"
             manifestPlaceholders = [appName: "[DEV] Flutter Clean Architecture"]
         }
