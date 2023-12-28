@@ -61,8 +61,25 @@ class _RestaurantListPageState extends BasePageState<RestaurantListPage,
   }
 
   Widget _buildRestaurantList(List<Restaurant> restaurants) {
-    return Center(
-      child: Text('Restaurant count: ${restaurants.length}'),
+    return ListView.builder(
+      itemCount: restaurants.length,
+      itemBuilder: (context, index) {
+        final restaurant = restaurants[index];
+        return _buildRestaurantItem(context, index, restaurant);
+      },
+    );
+  }
+
+  Widget _buildRestaurantItem(
+    BuildContext context,
+    int index,
+    Restaurant restaurant,
+  ) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(restaurant.name ?? ''),
+      ),
     );
   }
 }
